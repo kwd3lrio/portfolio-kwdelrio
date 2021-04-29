@@ -1,0 +1,45 @@
+
+body {
+    width: 90%;
+    margin-top: 2%;
+    margin-bottom: 10%;
+    margin-right: 20%;
+    padding: 5%;
+}
+
+
+hr {
+    width: 60%;
+    max-width: 100%;    
+    border-bottom: 1px solid #000;
+}
+
+
+h1 {
+    font-family: Tahoma,Geneva, sans-serif;
+    text-align: center;
+    color: red;
+}
+
+h2 {
+    font-family: Garamond, serif;
+    font-style: italic;
+    text-align: center;
+    color: red;
+    margin-bottom: 2%;
+}
+
+
+.formSubHeading {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+input#createResume {
+    padding: 1% 2% 1%;
+    border: 1px solid #000;
+    color: #000;
+    font-weight: bold;
+    background-color:#D3D3D3;
+    cursor: pointer;
+}

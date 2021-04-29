@@ -4,17 +4,30 @@
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="Keywords" content="Del-Rio UX, del rio ux, del-rio ux, DelRioUX, delrioux, Del-Rio UX portfolio, del rio ux portfolio, del-rio ux portfolio, DelRioUX portfolio, delrioux portfolio, web design, front end development, kristian walter del-rio, kristian's portfolio, kristian w's "/>
+     <meta name="Description" content="web designer and front-end developer in the triangle, raleigh, north carolina area with 2 years of experience creating interfaces for websites in HTML5/CSS languages, and in WordPress and Joomla content managers."/>
+
      
      <title>DelRio UX Portfolio</title>          
 
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     
+     <!-- Social Media and hamburger menu icon library -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">          
 
+     
+     <!-- CSS STYLE SHEETS -->
+     
      <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
 
      <link rel="stylesheet" href="./css/w3cssV4.css">
 
      <link rel="stylesheet" href="./css/stylesfinal.css">
      
+     <!-- Yellowtail Google Font source -->
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+     <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+
+   
 </head>
 
 <body id="content">
@@ -23,7 +36,7 @@
 
           <div class="mobile_header_identity">
                <h1> Del-Rio UX </h1>
-               <p> Web Design and Development </p>
+               <p class="w3-large"> Web Design | Web Development </p>
           </div> 
 
           <!-- MOBILE NAV MENU -->                    
@@ -34,15 +47,24 @@
                </a>
 
                <div id="mobileLinks">
+
+                    <!-- CLOSE BUTTON -->
+
+                    <a href="javascript:void(0)" class="close_icon" onclick="showMobileNav()">
+                         &times;
+                    </a>
+
+                    <!-- MENU ITEMS -->
+
                     <a href="#top_area"> Home </a>
-                    <a href="#about_section">About</a>  
                     <a href="#portfolio_section">My Work</a> 
+                    <a href="#about_section">About</a>                      
                     <a href="#skills_section">Skills</a> 
                     <a href="./docs/Kdr-resume2021.pdf" target="_blank">Resume</a>  
                     <a href="#contact_section">Contact</a>
                </div>
 
-               <a href="javascript:void(0);" class="icon" onclick="showMobileNav()">
+               <a href="javascript:void(0);" id="openBTN" class="icon" onclick="showMobileNav()">
 
                     <span class="menu_btn">Menu</span>
                     
@@ -64,7 +86,7 @@
                     <a href="" class="img_links"> <img src="./images/delriouxlogo.png" alt="Del-Rio UX logo-in top page area" /> </a>
                     
                     <h1>
-                         <a href="index.html"> Web Design and Web Development </a>
+                         <a href="index.html"> Web Design | Web Development </a>
                     </h1>
                                              
                </div> <!-- END logo_banner div tag -->
@@ -78,8 +100,8 @@
 
      <nav id="id_desktop_nav">
            <a href="#top_area"> Home </a>
-           <a href="#about_section">About</a>  
-           <a href="#portfolio_section">My Work</a> 
+           <a href="#portfolio_section">Work</a> 
+           <a href="#about_section">About</a>             
            <a href="#skills_section">Skills</a> 
            <a href="./docs/Kdr-resume2021.pdf" target="_blank">Resume</a>  
            <a href="#contact_section">Contact</a>
@@ -90,41 +112,38 @@
 
      <!-- Home Main -->
      
-     <main  id="home_section" class="w3-display-container w3-padding-large section_text">  <!-- removed class home-->
-
-          <!-- Removed class home_container div-->
+     <main id="home_section" class="w3-display-container w3-padding-large section_text">        
                
                <div class="w3-container section_title_container"> 
-                    <h1>Welcome</h1>
+                    <h1>
+                         Welcome
+                    </h1>
                </div>
 
                <!-- START w3-row div: holds a left-side and right-side column -->
 
-               <div class="w3-row w3-section"> <!--removed class home_grid not the div-->
+               <div class="w3-row w3-section">
 
                     <!-- START home left-column-->
-                    <div class="w3-half w3-container w3-margin-bottom"> <!-- Removed class home_left not the div-->
-                         
-                         <aside class="w3-padding"> <!-- Removed class aside_content-->                         
-                              <h3 class="w3-bold w3-large w3-margin-bottom"> I am Kristian W. Del-Rio, a Web Designer/Front-End Developer, in the North Carolina, Triangle area </h3>
-                              
-                              <p class="w3-small w3-padding-small">
-                                   I am a driven individual who wants to make your next website project idea have the best code and ensure it serves your business and customer's needs. Here's some of my recent work. 
-                              </p>
-                                   
-                              <p class="w3-small w3-padding-small">
-                                   I have two years experience in website design and development for creating website layouts and putting your content to tie in with your business identity.                             
-                              </p>                         
-                         </aside> 
+
+                    <div class="w3-half w3-container w3-margin-bottom home_left"> 
+                                           
+                         <h3 class="w3-bold"> 
+                              <strong class="drop_cap_homesection"> I am Kristian W. Del-Rio.</strong>  Looking to be part of a company's dev team creating engaging web interfaces. I am delighted you are viewing my portfolio!
+                         </h3>
+                                                       
+                         <br />                                                                                
                     </div>  <!-- END w3-half div: home left-side column -->
                     
                     <!-- START w3-half div: home right-side column -->
 
-                    <div class="w3-half w3-container margin-top"> <!-- Removed class home_right-->                             
+                    <div class="w3-half w3-container margin-top home_right">                             
 
-                              <div class="w3-card w3-margin-bottom my_card_style"> <!--Removed recent_projects_box2 class not div-->
+                              <div class="w3-card w3-margin-bottom recent_work_card"> 
 
-                                   <a href="https://wcet3.waketech.edu/kwdelrio/web250blog/wordpress/" 
+
+                                   <a href="./projects/protechservices/index.php" 
+                                        target="_blank"
                                         class="img_links">
                                              <img src="./images/web-tech-svc-thumbnail-big.jpg"
                                              class="w3-image"
@@ -132,21 +151,25 @@
                                    </a>
                                    
 
-                                   <div class="w3-container w3-padding my_card_style_color">
+                                   <div class="w3-container w3-padding recent_work_card_color">
 
                                         <h4 class="w3-bold w3-padding">
-                                             Recent Work | Pro Tech Services
+                                             Recent Work
                                         </h4>
 
-                                        <p class="w3-small w3-margin-top">
-                                             A recent website built using the WordPress.org software.
-                                             My goal was to make a website that works for a local tech business.
+                                        <!-- <p class="w3-margin-top">
+                                             ProTechServices.com was designed to promote a fictitious local business.
+                                        </p> -->
+
+                                        <p class="w3-margin-top">
+                                             Built with WordPress
                                         </p>
 
                                         <p class="w3-padding w3-margin-top w3-margin-bottom">
-                                             <a href="#portfolio_section" 
-                                             class="img_links">
-                                                  See More     
+                                             <a href="./projects/protechservices/index.php"
+                                                  target="_blank"
+                                                  class="w3-bold img_links">
+                                                  View Site
                                              </a>
                                         </p>
                                    </div>
@@ -162,13 +185,182 @@
 
 
 
+<!--  PORTFOLIO SECTION  -->
+<section id="portfolio_section" class="w3-container portfolio section_text">     
+                    
+     <div class="w3-container section_title_container">      
+        <h1>Portfolio Work</h1>
+    </div> 
+          
+    <!-- START Row grid for Flip Cards -->
+
+     <div class="w3-row  w3-margin-bottom">
+
+          <!-- START FLIP CARD 01 -->
+
+          <div class="w3-third">
+
+               <div class="w3-card flip-card flip-card-reflection">
+
+                    <div class="flip-card-inner">
+                         
+                         <div class="flip-card-front">
+                              <img src="./images/peakfitness-thumbnail.jpg"
+                                   alt="thumbnail size image of peak fitness website front page">
+
+                              <!--NOTE: removed from img style="width:300px;height:300px;" -->
+
+                              <h4> Peak Fitness </h4>                              
+
+                         </div>
+
+                         <div class="flip-card-back">
+                                   
+                              <p> 
+                                   Peak Fitness was designed and built for the fictitious company's goal to offer it's facility and services to a health-conscious, all-family inclusive demographic group of ages 10+.                                    
+                              </p>                                                           
+                              
+                              <p> 
+                                   Project document including project overview, goals, design and development requirements.
+                              </p>
+                                                            
+                              <p> 
+                                   HTML5 and CSS3 markup for content and layout. JavaScript was used for animated banners.
+                              </p>
+
+                              <a href="./projects/peakfitness/index.html"  
+                                   target="_blank"             
+                                   class="w3-button w3-ripple 
+                                   w3-border w3-border-white w3-round-medium
+                                   w3-show-block w3-center">
+                                   View Site
+                              </a>
+                    
+                         </div> <!-- END class flip-card-back div-->
+
+                    </div> <!-- END class flip-card-inner div-->
+
+               </div> <!-- END class flipcard div-->
+
+          </div> <!-- END class w3-third div-->
+
+          <!-- END FLIP CARD 01 -->
+
+
+
+
+
+
+
+
+          <!-- START FLIP CARD 02 -->
+
+          <div class="w3-third">
+
+                    <div class="w3-card flip-card flip-card-reflection">
+
+                         <div class="flip-card-inner">
+                              
+                              <div class="flip-card-front">
+                                   <img src="./images/resume-builder-thumbnail.jpg"
+                                        alt="thumbnail size image of resume builder javascript form by DelRio UX">
+
+                                        <!--NOTE: removed from img style="width:300px;height:300px;" -->
+
+                                   <h4> JavaScript Resume Builder </h4>                                   
+
+                              </div>
+
+                              <div class="flip-card-back card_spacing">                                   
+                                        
+                                   <p> 
+                                        A project focused on developing a web form that could generate text output in an HTML5 layout. Thus revealing a form that a user can enter their information to produce a resume document to print.
+                                   </p>                                                           
+                                                                                                                                            <p> 
+                                        HTML5 and CSS3 markup were used for layout. JavaScript was used for displaying and processing data.
+                                   </p>
+
+                                   <a href="./projects/resumebuilder/finalProject.html"  
+                                        target="_blank"             
+                                        class="w3-button w3-ripple 
+                                        w3-border w3-border-white w3-round-medium
+                                        w3-show-block w3-center">
+                                        View App 
+                                   </a>
+                                        
+                              </div> <!-- END class flip-card-back div-->
+
+                         </div> <!-- END class flip-card-inner div-->
+
+                    </div> <!-- END class w3-card flipcard div-->
+
+               </div> <!-- END class w3-third div-->
+          
+          <!-- END FLIP CARD 02 -->
+
+
+          
+
+
+          <!-- START FLIP CARD 03 -->
+
+          <div class="w3-third">
+
+               <div class="w3-card flip-card flip-card-reflection">
+
+                    <div class="flip-card-inner">
+                         
+                         <div class="flip-card-front">
+                              <img src="./images/web-tech-services-thumbnail.jpg"
+                              alt="thumbnail size image of resume builder javascript form by DelRio UX">
+
+                              <!--NOTE: removed from img style="width:300px;height:300px;" -->
+
+                              <h4> Pro Tech Services</h4>
+                              
+
+                         </div> <!-- END class flip-card-front div-->
+
+                         <div class="flip-card-back card_spacing">
+                              
+                              <p> 
+                                   Pro Tech Services is a project developed using WordPress development platform to create a branded template that a fictitious local tech business can use to insert their own content.
+                              </p>                                                           
+                                                                                                    
+
+                              <a href="./projects/protechservices/index.php"  
+                                   target="_blank"             
+                                   class="w3-button w3-ripple 
+                                   w3-border w3-border-white w3-round-medium
+                                   w3-show-block w3-center">
+                                   View Site
+                                   </a>
+                                   
+                         </div> <!-- END class flip-card-back div-->
+
+                    </div> <!-- END class flip-card-inner div-->
+
+               </div> <!-- END class flip-card div-->
+
+          </div> <!-- END class w3-third div-->
+          
+          <!-- END FLIP CARD 03 -->
+
+
+     </div> <!-- END class w3-row div-->   
+     
+</section>  <!--  END PORTFOLIO SECTION -->
           
 
 
 
 
+
+
+
+
      <!-- About Section -->
-                         <!-- NOTE: removed class=about_section -->
+                         
      <section id="about_section" class="w3-display-container w3-padding-large about section_text">
           
           <div class="w3-container section_title_container">
@@ -177,77 +369,76 @@
 
           <!-- START w3-row class div for entire home section -->
 
-          <div class="w3-row">
-                                                     
-                         <!-- NOTE: removed <div class="about_content"> -->
-                         <!--NOTE: removed class=about_text-->
-                    
-                    <!-- START two-third class div -->
+          <div class="w3-container w3-row">
+                                                                              
+                    <!-- START w3-half class div -->
                                 
-               <div class="w3-container w3-twothird">
+               <div class="w3-container w3-half about_left_column">
 
-                    <h2 class="w3-large w3-bold"> Web Designer and Front-End Developer in the Triangle Area of North Carolina </h2>
-                    <br/>
-                    <p class="w3-small">
-                         Hi there! I appreciate you taking a look at my web development portfolio site. I hope you enjoy looking at my projects as much as I did creating them. I am a web designer and Front-end Developer with 2 years of experience creating interfaces for websites in HTML5/CSS languages, and in WordPress and Joomla content managers. I hope there's some projects here that can demonstrate how I can be of help to your web development needs. I take delight in designing the interface and layout of digital content. I like the mix of visual elements coming together to catch attention from users it was meant for. And it doesn't stop there, I am very driven to ensure the content and interface of websites and apps I make, are accessible to as many users as possible.
-                    </p>
+                    <!-- <h3 class="w3-xlarge w3-bold"> Triangle Area Web Designer + Front-End Developer </h3>
+                    <br/> -->
 
-                    <br/>
-
-                    <p class="w3-small text_link">
-                         Accessibility has been a more prominent phrase around the web design and development world, but it truly is important to ensure you are making your content available to as many users as possible, in additon to ensuring your website or web app meets <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank"> Web Content Accessibility Guidelines </a>: which is a requirement now for all digital content to be accessed through the web or internet. Finally,  Search engines like Google will rank your site content at a higher priority in search results, if your content is more accessible than the competition's. It is a passion of mine to make websites and apps as Search Engine and User friendly as needed. I have been on the side of a user who wants to access great content, but the content was just not accessible: it was just not easy to find due to poor navigation, or color scheme made the context illegible.
-                    </p>
-
-                    <br/>                         
-
-                    <p class="w3-medium w3-bold">
-                         Find out more about my experience, skills, and knowledge in my resume, blog,and Skills section of my portfolio.
-                    </p>
-
-                    <br/>
-
-               </div>  <!-- END w3-twothird OR about_text div -->
-
-                    <!--NOTE: removed class=about_right w3-display-topright -->
-
-               <!-- START w3-container w3-third class div right-side column-->
-               
-               <div class="w3-container w3-third about_img">
+                    <!-- DISPLAY ABOUT IMAGE MOBILE ONLY -->
 
                     <img src="./images/kris-formal-profile.jpg"
-                         class="w3-image w3-center" 
-                         alt="image of Front End Developer Kristian W. Del Rio in about section" />
+                    class="w3-image about_mobile" 
+                    alt="image of Front End Developer Kristian W. Del Rio in about section" />
+               
+               <!-- END DISPLAY ABOUT IMAGE MOBILE ONLY -->
 
-                    <div>
-                         <a href="./docs/Kdr-resume2021.pdf"
-                              target="_blank" 
-                              class="w3-button w3-ripple w3-black
-                              w3-border w3-border-white
-                              w3-round-medium w3-show-block" 
-                              style="height:50px;">
-                              Resume</a>
-                    </div>
+                    <p>
+                         <strong class="drop_cap_aboutsection">Hello,</strong> my name is Kristian. Thanks for viewing my portfolio. I am a web designer and front-end developer from the North Carolina, Triangle area with a focus on helping local businesses design and develop useful, engaging interfaces for websites and web apps.
+                          I hope my work inspires your interest and you'll consider me for assisting with your company's needs. It's a delight to design the layout and components for presenting digital content. It's the mix of visual elements coming together to work for users, that excites me.
+                    </p>
+                    <br/>
+                    
+                    
+
+               </div>  <!-- END w3-half OR about_text div -->
+                    
+
+               <!-- START w3-container w3-half class div right-side column-->
+               
+               <div class="w3-container w3-half w3-center  about_right_column">
+
+                    <!--START about right column container-->
+
+                    <div class="w3-container about_img about_btns">                         
+
+                         <img src="./images/kris-formal-profile.jpg"
+                              class="w3-image" 
+                              alt="image of Front End Developer Kristian W. Del Rio in about section" />
+
+                              
                          
-                    <div>
-                         <a href="https://inclusiveuxblog.wordpress.com/"
-                              target="_blank" 
-                              class="w3-button w3-ripple w3-black
-                              w3-border w3-border-white 
-                              w3-round-medium w3-show-block" 
-                              style="height:50px;">
-                              Blog</a>
-                    </div>
+                         <!-- RESUME BUTTON -->
+
+                              <a href="./docs/Kdr-resume2021.pdf"
+                                   target="_blank" 
+                                   class="w3-button w3-ripple w3-show-block">
+                                   Resume</a>
                          
-                    <div>
-                         <a href="#skills_section" 
-                         class="w3-button w3-ripple w3-black
-                         w3-border w3-border-white 
-                         w3-round w3-round-medium
-                         w3-show-block" 
-                         style="height:50px;"> 
-                         Professional Skills</a>
-                    </div>
-               </div> <!--END w3-third OR about_links about_image div-->
+                         
+                         <!-- BLOG BUTTON -->
+                         
+                              <a href="https://inclusiveuxblog.wordpress.com/"
+                                   target="_blank" 
+                                   class="w3-button w3-ripple w3-show-block">
+                                   Blog</a>
+                         
+                         
+                         <!-- SKILLS BUTTON -->
+                         
+                              <a href="#skills_section" 
+                              class="w3-button w3-ripple w3-show-block"> 
+                              Professional Skills</a>
+                         
+
+                    </div> <!--END w3-container about_right_column class div-->
+
+                    <br/><br />                        
+
+               </div> <!--END w3-half OR about_links about_image div-->
 
               <!-- NOTE: removed about_content </div> -->
           </div> <!-- END w3-row OR about_container div-->
@@ -259,11 +450,16 @@
 
 
 
+
+
+
+
+
      
      <!-- SKILLS SECTION -->
      <section id="skills_section" class="w3-padding-large skills section_text">               
 
-          <div class="w3-display-container"> <!-- NOTE: removed class=skills_container -->
+          <div class="w3-display-container skills_container">
 
                <div class="w3-container section_title_container"> 
                   <h1>Skills</h1>
@@ -271,46 +467,55 @@
                
                <!-- START w3-row div: two column layout -->
 
-               <div class="w3-row">   <!-- NOTE: removed class=skills_grid -->
+               <div class="w3-row">
                     
                     <!-- START SKILLS LISTS -->                         
                     
-                    <!-- START w3-twothird div: right-side column -->
+                    <!-- START w3-twothird div: left-side column -->
 
-                    <div class="w3-twothird"> <!-- NOTE: removed class=skills_left -->                    
+                    <div class="w3-twothird skills_column">                    
                          
-                         <!-- SKILL 1: UX/UI Strategy  -->
+                         <!-- SKILL 1: UX/UI Strategy: nested w3-row-padding div -->
+
                          <div class="w3-row-padding">
 
-                              <!-- NEW SKILL 1 image -->
-                              <div class="w3-quarter w3-center">
+                              <!-- NEW SKILL 1 image column-->
+                              <div class="w3-quarter w3-center icon_img">
                                    <br />
                                    <br />
                                    <img src="./images/chess.svg"
                                         alt="bullet point image for ux/u.i. strategy skill description"
-                                        class="w3-image"
-                                        style="max-width:40%;"/>
+                                        class="w3-image"/>
+
                           </div> <!-- END class w3-quarter div-->
 
 
-                         <!-- SKILL 1 DESCRIPTION -->
-                                    <!-- NOTE: removed class=skills_desc -->
+                         <!-- SKILL 1 DESCRIPTION column-->
+                                    
                          <div class="w3-threequarter">
 
                               <h2 class="w3-padding">UI/UX Strategy</h2>
 
-                              <p class="w3-small w3-padding">
-                                   2 Years experience conceptualization and implementation of user interfaces for results-driven  user experience: From concept to strategy to implementation, I have the experience,knowledge, and drive to tailor your website navigation and content layout for your needs and your customers.
+                              <p class="w3-padding">
+                                   2 Years experience developing user interfaces for results-driven  user experience: From concept to strategy to implementation.
                               </p>
                               </div> <!--END class w3-threequarter div-->
                          
                          </div> <!-- END w3-row-padding class div -->
                          
-                         <!-- END NEW SKILL 1: UX/UI Strategy -->
+                         <!-- END SKILL 1: UX/UI Strategy -->
 
 
 
-                      <!-- NEW SKILL 2: web design and development --> 
+
+
+
+
+
+                      <!-- NEW SKILL 2: web design and development -->
+                              
+                              <!-- NEW w3-row-padding class div-->
+                       
                       <div class="w3-row-padding">
 
                           <!-- SKILL 2 Image -->
@@ -319,20 +524,19 @@
                                <br />
                               <img src="./images/wireframe.svg"
                                    alt="bullet point image for  web design and development skills list"
-                                   class="w3-image"
-                                   style="max-width: 40%;"/>
+                                   class="w3-image"/>
                          </div> <!-- END class w3-quarter div-->
                               
-                         <!-- SKILL 2 DESCRIPTION -->
+                         <!-- SKILL 2 DESCRIPTION column-->
                          <div class="w3-threequarter">
 
                               <h2 class="w3-padding">Web Development and Design</h2>
                               
-                              <p class="w3-small  w3-padding">
+                              <p class="w3-padding">
                                    Ability to create websites and html-based web apps to adapt, in screen size, to any device's screen. Skills include:
                               </p>
 
-                              <ul class="w3-small">
+                              <ul>
                                    <li> Website creation in HTML5/CSS markup languages</li>
                                    <li> JavaScript component development for user interaction </li>
                                    <li> WordPress website design creation </li>
@@ -345,11 +549,21 @@
                          </div> <!--END class w3-threequarter div-->
                       </div> <!-- END w3-row-padding class div -->
 
-                      <!-- END NEW SKILL 2 web design and development -->
+                      <!-- END SKILL 2 web design and development -->
+
+
+
+
+
+
+
 
                       
 
                      <!-- NEW SKILL 3: Graphic Design -->
+
+                              <!-- NEW w3-row-padding class div -->
+
                      <div class="w3-row-padding">
 
                          <!-- SKILL 3 IMAGE -->
@@ -358,21 +572,22 @@
                               <br />
                              <img src="./images/wireframe.svg" 
                                  alt="bullet point image for graphic design skills list"
-                                 class="w3-image"
-                                 style="max-width:40%;"/>
+                                 class="w3-image"/>
                          
                          </div> <!-- END class w3-quarter div -->
                              
-                         <!-- SKILL 3 DESCRIPTION -->
+                         
+                         <!-- SKILL 3 DESCRIPTION column-->
+
                          <div class="w3-threequarter">
 
                               <h2 class=" w3-padding"> Graphic Design </h2>
                               
-                              <p class="w3-small  w3-padding">
+                              <p class="w3-padding">
                                    5 years experience creating layouts for advertisement printed media. Skills include the following:
                               </p>
 
-                              <ul class="w3-small">
+                              <ul>
                                    <li>Typography and Color scheme for branding</li>
                                    <li>Layout design for printed and digital content</li>
                                    <li>Large Format print designs (banners, yard-signs,etc.)</li>
@@ -383,11 +598,21 @@
                        </div>   <!--END class w3-threequarter div-->
                     </div>     <!-- END w3-row-padding class div -->
 
-                    <!-- END NEW SKILL 3 Graphic Design-->
+                    <!-- END SKILL 3 Graphic Design-->
+
+
+
+
+
+
+
 
 
                     
                     <!-- NEW SKILL 4: Software Skills -->
+
+                         <!-- NEW w3-row-padding class div-->
+
                     <div class="w3-row-padding">
 
                          <div class="w3-quarter w3-center">
@@ -395,8 +620,7 @@
                               <br />
                              <img src="./images/virtual.svg" 
                                 alt="bullet point image for software skills list"
-                                class="w3-image"
-                                style="max-width:40%;"/>
+                                class="w3-image"/>
                        </div> <!-- END class w3-quarter div-->
                              
                          <!-- SKILL 4 DESCRIPTION   -->
@@ -406,7 +630,7 @@
                               
                               <h4 class="w3-padding">Digital Design</h4>
 
-                              <ul class="w3-small">                                   
+                              <ul>                                   
                                    <li> Adobe Creative Cloud (Illustrator, Photoshop, and InDesign) </li>
                                    <li> WordPress.com </li>
                                    <li> WordPress.org</li>                                   
@@ -414,7 +638,7 @@
                     
                               <h4 class="w3-padding">Web Development</h4>
 
-                              <ul class="w3-small">                                   
+                              <ul>                                   
                                    <li> Adobe Dreamweaver and XD </li>
                                    <li> Microsoft Visual Studio | Microsoft Visual Studio Code</li>
                                    <li>PHPStorm</li>
@@ -425,48 +649,51 @@
 
                               <h4 class="w3-padding">Code Frameworks</h4>
 
-                              <ul class="w3-small">
+                              <ul>
                                    <li> Bootstrap CSS and JS </li>                                  
                                    <li>W3-CSS css framework</li>
                                    <li>React JS</li>
                                    <li>Angular JS</li>
-                                   <li>Vue JS</li>
+                                   <li>Vue JS</li>                                   
                               </ul>
-                             
-                       </div> <!--END class w3-threequarter div-->
+                              
+                       </div> <!--END class w3-threequarter div-->                       
 
                     </div> <!-- END w3-row-padding class div -->
                          
-                  </div> <!-- END w3-twothird class div -->
+                  </div> <!-- END w3-twothird class div skills column-->
                   
-                  <!-- END NEW SKILL 4: Software -->
+                  
+                  <!-- END SKILL 4: Software -->
                     
 
                     <!-- END ALL SKILLS LIST -->
 
 
-                    <!-- CALL TO ACTION BUTTON COLUMN -->
 
-                              <!-- NOTE: removed class=skills_right -->
 
-                    <div class="w3-quarter">
+
+
+
+
+
+                    <!-- CALL TO ACTION BUTTON COLUMN --> 
+
+
+                    <div class="w3-container w3-quarter skills_right">
                          
-                         <div class="w3-padding-32 w3-container w3-center " 
-                              style="width: 100%; height:auto;">
+                         <div class="w3-container w3-padding-32 w3-center call_box">
 
                               <h3 class="w3-padding w3-bold"> How can I help? </h3>
 
-                              <p class="w3-small w3-padding"> When you're ready, I can help with your web development and design needs.</p>
-                              
-                              <div class="w3-container" style="width: 100%; height:auto;">
+                              <!-- <p class="w3-padding"> When you're ready, I can help with your web development and design needs.</p> -->
+                                                            
                                    <a href="#contact_section" 
-                                        class="w3-button w3-ripple w3-black 
-                                        w3-border w3-round-medium w3-border-white
-                                        w3-show-block w3-medium w3-center" 
-                                        style="min-width:100%; height:50px;">
+                                        class="w3-button w3-ripple 
+                                        w3-border w3-border-white
+                                        w3-show-block call_button">
                                         Contact Me
-                                   </a> 
-                              </div>
+                                   </a>                               
                                                                                                    
                          </div>  <!-- END Action_call div -->
                     
@@ -475,211 +702,14 @@
                <!-- END CALL ACTION BUTTON -->
                      
                </div>  <!-- End w3-row class OR Skills_grid class div-->
-          </div>       <!-- End class w3-display-container OR Skills_container div-->
-
-     </section>  <!-- End Skills SECTION   -->
-
-
-
-     
-
-
-
-     
-
-     
-     
-     <!--  PORTFOLIO SECTION  -->
-     <section id="portfolio_section" class="w3-container portfolio section_text">
-
-          <!-- note: removed class portfolio_container div-->
-                         
-          <div class="w3-container section_title_container">      
-             <h1>Portfolio Work</h1>
-         </div> 
-
-               <!--start grid ROW : includes two w3-col class columns-->
-                    <!-- note: removed class portfolio_main -->
                
-               <div class="w3-row-padding w3-stretch">
-
-                    <!-- start w3-quarter class div: left-sidecolumn -->
-                    <!-- note: removed class portfolio_left-->
-
-                    <div class="w3-quarter w3-center">
-                         
-                         <!-- removed class portfolio_sidenav -->
-
-                         <h3 class="w3-bold w3-border-bottom w3-border-white">
-                              View by Category
-                         </h3>
-
-                         <nav class="projects_nav">
-
-                              <br />
-                              <ul>
-                                   <li> <a href="#portfolio_section"> Websites</a> </li>
-
-                                   <li> <a href="#portfolio_section"> WordPress Sites </a> </li>
-
-                                   <li> <a href="#portfolio_section"> Web Apps</a> </li>
-                                   
-                                   <li> <a href="#portfolio_section"> Graphic Design </a> </li>       
-                              </ul>
-                         </nav>
-
-                         <br /> <br />
-
-                    </div> <!--END class w3-quarter div: left-side column-->
-                    
-
-                    <!-- START div w3-threequarter: right-side column -->
-
-                         <!-- note: removed class portfolio_right -->
-
-                    <div class="w3-threequarter">
-                         
-                         <!-- START PORTFOLIO CARDS-->
-                         
-                         <div class="w3-row-padding">
-                         
-                              <!-- START CARD 1 -->
-
-                              <div class="w3-container w3-third w3-mobile w3-section mobile_container"> 
-
-                                  <div class="w3-card portfolio_card">
-
-                                        <img src="./images/peakfitness-thumbnail.jpg"  
-                                             alt="thumbnail size image of peak fitness website front page"      
-                                             style="width:100%">
-                                        
-                                        <div class="w3-container w3-black">
-
-                                             <h4 class="w3-padding"> Peak Fitness </h4>
-
-                                             <p class="w3-small w3-padding"> Peak Fitness is a website designed and built for the fictitious company's  goal to drive traffic to its health and fitness facility from a local, health-conscious demographic </p>
-
-                                             <p class="w3-small w3-padding">A design structure that consisted of the health facility's brand elements and promotional and interactive content was developed to encourage users to subscribe for a fitness center membership thus helping to reach business goals. </p>
-
-                                             <p class="w3-small w3-padding"> HTML and CSS3 markup was used to code the entire site. Some JavaScript was used to create the animated banners</p>
-
-                                             <br /> <br />
-
-                                                  <a href="./projects/peakfitness/index.html"  
-                                                       target="_blank"             
-                                                       class="w3-button w3-ripple w3-black 
-                                                       w3-border w3-border-white w3-round-medium
-                                                       w3-show-block w3-center">
-                                                       View Website </a>
-
-                                             <br />
-                     
-                                        </div>  <!-- END w3-black container div -->
-                                  
-                                  </div> <!-- END w3-card class div-->
-
-                              </div>  <!-- END w3-third div -->
-
-                              <!-- END CARD 1-->
-
-                              
-                              <!-- START CARD 2 -->
-
-                              <div class="w3-container w3-third w3-mobile w3-section mobile_container">
-
-                                   <div class="w3-card portfolio_card">
- 
-                                         <img src="./images/resume-builder-thumbnail.jpg" alt="Avatar"      
-                                              style="width:100%">
-                                         
-                                         <div class="w3-container w3-black">
-
-                                             <h4 class="w3-padding"> Resume Builder HTML/JS App </h4>
-
-                                             <p class="w3-small w3-padding"> The Resume Builder is built for the purpose to help users looking to build a quick resume do so by only having to enter in their various career-related information. The app's output is an HTML5 printable resume document. </p>
-
-                                             <p class="w3-small w3-padding">
-                                                  HTML5 and CSS3 were used to design the interactive form elements and JavaScript for the app to generate a printable resume.
-                                             </p>                                             
-
-                                             <br /> <br />
-
-                                                  <a href="./projects/resumebuilder/finalProject.html" target="_blank" class="w3-button w3-ripple w3-black
-                                                  w3-border w3-border-white w3-round-medium
-                                                  w3-show-block w3-center">
-                                                  View App </a>
-                                             
-                                             <br /> 
-                                                                                         
-                                        </div>  <!-- END w3-black container div -->
-                              
-                                   </div> <!-- END w3-card class div-->
-
-                              </div>  <!-- END w3-third div -->          
-
-                              <!-- END CARD 2 -->
-
-                              
-
-                              <!-- START CARD 3 -->
-
-                              <div class="w3-container w3-third w3-mobile w3-section mobile_container"> 
-
-                                   <div class="w3-card portfolio_card">
- 
-                                         <img src="./images/web-tech-services-thumbnail.jpg" alt="Avatar"      
-                                              style="width:100%">
-                                         
-                                         <div class="w3-container w3-black">
-
-                                             <h4 class="w3-padding"> Pro Tech Services Site </h4>
-
-                                             <p class="w3-small w3-padding">
-                                                  Pro Tech Services is a project developed using the WordPress CMS software to create a branded template that the fictitious local business can use to insert their own content to promote their services and drive traffic and generate new customers.
-                                             </p>
-                                             
-                                             <br /> <br />
-                                             
-                                                  <a href="https://wcet3.waketech.edu/kwdelrio/web250blog/wordpress/index.php" target="_blank" 
-                                                       class="w3-button w3-ripple w3-black 
-                                                       w3-border w3-border-white w3-round-medium
-                                                       w3-show-block w3-center">
-                                                            View Website </a>                                             
-
-                                             <br />
-                                                                                     
-                                        </div>  <!-- END w3-black container div -->
-                                   
-                                   </div> <!-- END w3-card class div-->
-
-                              </div>  <!-- END w3-third div --> 
-                              
-                               <!-- END CARD 3 -->
-
-                         </div> <!-- END w3-row-padding class div-->
-                         
-                         <!--END PORTFOLIO CARDS-->
-
-                    </div> <!-- END div w3-threequarter: right-side column-->
-                    
-                         <!-- note: removed END class PORTFOLIO_RIGHT div-->
-
-               </div>     <!-- END w3-row class div or portfolio_main-->
-
-                    <!--removed END portfolio_container class div-->
-
-         
-          <!-- EMAIL BAR -->
-          <!-- <div class="email_bar">
-               <img src="./images/mail.svg" alt="email icon" />
-               <p> Email </p>
-               <span> kristian.delrio@example.com </span>
-          </div> -->
+          </div>       <!-- End class w3-display-container OR Skills_container div-->
           
-     </section>  <!--  END PORTFOLIO SECTION -->
+     </section>  <!-- End Skills SECTION-->
+
+
 
      
-
 
 
 
@@ -696,66 +726,98 @@
                
           <!-- START w3-row div: contains left and right-side columns -->
                
-          <div class="w3-row-padding">
+          <div class="w3-row-padding contact_row">
 
-               <div class="w3-half w3-container">
+               <div class="w3-container w3-half contact_left">
+                    
+                   <div class="card_phone phone_reflection">
+                    
+                    <div class="card_phone_screen">
 
-                    <div class="w3-container w3-padding">
-                         <h3 class="w3-bold w3-border-bottom w3-border-white"> 
-                              Looking forward to hearing from your organization!
-                         </h3>
-                    </div> <!-- END w3-container: heading h3-->
+                         <h3 class="w3-bold"> Let me know how I can help </h3>                   
 
-                    <div class="w3-container w3-padding">
-                         <p class="w3-small">
-                              Thank you for the time you invested viewing my work.
-                              I am available to speak and discuss the web development needs
-                              of your business when you're available and ready.
-                         </p>
-                    </div>  <!--END w3-container div: paragraph-->
+                    <!-- Add Social media font awesome icons -->
+
+                    <div class="w3-container w3-bar w3-center contact_social_icons">
+                    
+                         <a href="https://www.linkedin.com/in/kristianwdelrio" target="_blank" 
+                              class="w3-button w3-circle w3-bar-item
+                                   fa fa-linkedin">
+                         </a>
+
+                         <a href="https://facebook.com/kristianwdelrio/" target="_blank"
+                              class="w3-button w3-circle
+                                   fa fa-facebook">
+                         </a>
+
+                    </div> <!--END w3-container social_media container div-->
+
+                    </div> <!-- END class card_phone_screen div-->
+
+                   </div> <!-- END class w3-card card_phone div-->
+
+                   
+
+
+                   <!-- FOR MOBILE DISPLAY: CONTACT SECTION SOCIAL MEDIA BUTTONS -->
+                   
+                   <!-- Add Social media font awesome icons -->
+
+                   <div class="w3-container w3-bar w3-center social_media contact_show_mobile">
+                         
+                         <h3 class="w3-bold"> Let me know how I can help </h3>
+                         
+                         <a href="https://linkedin.com/in/kristianwdelrio" target="_blank" 
+                              class="w3-button w3-circle
+                                   fa fa-linkedin">
+                         </a>
+
+                         <a href="https://facebook.com/kristianwdelrio/" target="_blank"
+                              class="w3-button w3-circle
+                                   fa fa-facebook">
+                         </a>
+
+                    </div> <!--END w3-container social_media container div-->
+
+               <!-- END FOR MOBILE DISPLAY: CONTACT SECTION GREETING and SOCIAL MEDIA BUTTONS -->
 
                </div> <!-- END w3-half class div: left-side column-->
 
                
                <!-- START w3-half class div: right-side column: includes form-->
 
-               <div class="w3-half w3-container w3-padding">
+               <div class="w3-half w3-container w3-padding contact_right">
 
-                    <div class="w3-card">                         
-                     
-                         <form action="" method="" class="w3-container contact_form">
-                              <p class="w3-section">
-                                   <label>First Name</label>
-                                   <input class="w3-input w3-border w3-round-large" type="text">                                   
-                              </p>
-                              
-                              <p class="w3-section">   
-                                   <label>Last Name</label>
-                                   <input class="w3-input w3-border w3-round-large" type="text">                                   
-                              </p>
+                    <div class="form_container">
+                                                  
+                         <!-- EMAIL ME FORM -->
 
-                              <p class="w3-section"> 
-                                   <label for="email-address"> Email Address: </label>
-                                   <input class="w3-input w3-border w3-round-large" type="email" name="email-address"/> 
-                              </p>
+                         <div style="width: 100%; height:auto;">
 
-                              <p class="w3-section"> 
-                                   <label for="comments"> Comments: </label>  
-                                   <textarea name="comments" id="comments" cols="30" rows="10" class="w3-input w3-border w3-round-large">                                        
-                                   </textarea> 
-                              </p>
+                              <!-- SCRIPT that RENDERS FORM -->
 
-                              <p class="w3-section">
-                                   <input type="submit" name="submit" value="Send Message"
-                                   class="w3-button w3-ripple
-                                        w3-text-black 
-                                        w3-white w3-border w3-round-medium
-                                        w3-medium w3-center w3-show-block">
-                              </p>
+                              <script src="https://www.emailmeform.com/builder/forms/jsform/KF18xG4k3d9zdgomcOD2" type="text/javascript"></script>
+                         </div>
 
-                         </form>
+                         <div style="margin-top:8%;text-align:center">
 
-                    </div> <!-- END class w3-card div: form card-->                    
+                              <!-- EMF FORMS Ad LOGO -->
+
+                              <div id='emf_advertisement'>
+                                   <font face="Verdana" size="2" color="#ffffff">Powered by</font>
+                                   <span style="position: relative; padding-left: 2%; bottom: -5%;">
+                                        <img src="//assets.emailmeform.com/images/footer-logo.png?bWFzdGVy" />
+                                   </span>
+                                        
+                                        <font face="Verdana" size="2" color="#ffffff">EMF </font>
+                                        <a style="text-decoration:none;" href="https://www.emailmeform.com/" target="_blank"><font face="Verdana" size="2" color="#ffffff">Contact Form</font>
+                                        </a>
+                              </div>
+                         </div>
+
+                         <!-- MY ORIGINAL CONTACT is placed here see file my-portfolio-contact-form to add code back -->                         
+
+                   </div> <!-- END class form_container div-->                    
                      
                </div> <!-- END w3-half class div: right-side column-->          
                
@@ -774,61 +836,87 @@
      <!-- FOOTER AREA  -->
 
 
-     <footer class="w3-padding-large footer section_text">
-
-          <div class="w3-container">
-          
+     <footer id="footer_section" class="w3-padding-large footer section_text">
+                    
                <!-- START w3-row class div: footer row for two columns -->
 
-               <div class="w3-row w3-section"> <!-- removed class footer_container -->
+               <div class="w3-row w3-container footer_row_container"> <!-- removed class footer_container -->
 
-                    <!-- START w3-third class div: left-side footer column -->
+                    <!-- START w3-half class div: left-side footer column -->
 
-                    <div class="w3-col w3-mobile footer_copyright" style="width:40%; height:auto;">  <!--removed class footer_left-->
+                    <div class="w3-container w3-half w3-center"> 
 
-                         <h5 class="w3-bold w3-mobile"> Kristian W. Del-Rio  </h5>
+                         <h5 class="w3-bold w3-large w3-mobile"> Kristian W. Del-Rio  </h5>
 
-                         <p class="w3-small w3-padding w3-mobile"> Email: kristian.delrio@gmail.com</p>
+                         <p class="w3-large w3-padding w3-mobile email_me"> Email: <a href="mailto:kristian.delrio@gmail.com" target="_blank">kristian.delrio@gmail.com</a></p>
 
-                         <p class="w3-small">
-                              &copy;
-                              <span id="copyright">
-                              <script>
-                                   document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
-                                   </script>
-                              </span>
-                              DelRio UX Portfolio                         
-                         </p>
+                         <!-- Add Social media font awesome icons -->
 
-                         <!-- Credit for JS code to Stackoverflow.com user Adam Milecki for this solution:
-                              [URL:https://stackoverflow.com/a/32638099]
-                              -->
+                         <div class="w3-container w3-bar w3-center social_media">                                                       
+                              
+                              <a href="https://www.linkedin.com/in/kristianwdelrio" target="_blank" 
+                                   class="w3-button w3-circle
+                                        fa fa-linkedin">
+                              </a>
+     
+                              <a href="https://facebook.com/kristianwdelrio/" target="_blank"
+                                   class="w3-button w3-circle
+                                        fa fa-facebook">
+                              </a>
+     
+                         </div> <!--END w3-container social_media container div-->
+                                                  
+                    </div>  <!-- END w3-half div: left-side footer column -->
 
-                    </div>  <!-- END w3-col div: left-side footer column -->
 
-                    <!-- START w3-col div: right-side footer column -->
+
+
+                    <!-- START w3-half div: right-side footer column -->
                     
-                    <div class="w3-col w3-stretch w3-mobile" style="width:60%;"> 
+                    <div class="w3-container w3-half w3-mobile w3-center">
 
                         <div class="w3-bar footer_navbar">
+
+                              <a href="#portfolio_section" class="w3-bar-item w3-button w3-mobile">
+                              My Work</a>
+
                               <a href="#about_section" class="w3-bar-item w3-button w3-mobile">
                                    About</a> 
-                              <a href="#portfolio_section" class="w3-bar-item w3-button w3-mobile">
-                                   My Work</a>
+                              
                               <a href="#skills_section" class="w3-bar-item w3-button w3-mobile">
                                    Skills</a>
-                              <a href="./docs/Kdr-resume2021.pdf" target="_blank" 
+                              
+                                   <a href="./docs/Kdr-resume2021.pdf" target="_blank" 
                               class="w3-bar-item w3-button w3-mobile">
                                    Resume</a> 
-                              <a href="#contact_section" class="w3-bar-item w3-button w3-mobile">
+                              
+                                   <a href="#contact_section" class="w3-bar-item w3-button w3-mobile">
                                    Contact</a>
                          </div> <!-- END w3-bar div : footer nav-->
                     
-                    </div> <!-- END w3-col div: right-side footer column -->
+                    </div> <!-- END w3-half div: right-side footer column -->
 
                </div> <!-- END class w3-row div: end footer row -->
 
-          </div> <!-- END w3-container div: contains footer row-->    
+               
+               <!-- START COPYRIGHT TEXT -->
+
+               <div class="w3-container w3-padding-medium w3-center copyright_bar">
+
+                    <p class="w3-large w3-margin-bottom">
+                         &copy;
+                         <span id="copyright">
+                         <script>
+                              document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
+                              </script>
+                         </span>
+                         DelRio UX Portfolio                         
+                    </p>
+
+                    <!-- Credit for JS code to Stackoverflow.com user Adam Milecki for this solution:
+                         [URL:https://stackoverflow.com/a/32638099]
+                         -->
+               </div>   <!-- END COPYRIGHT TEXT -->
 
      </footer>
      

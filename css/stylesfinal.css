@@ -26,8 +26,13 @@ h1 {
 }
 
 p {
-  font-size: 16px;
+  font-size: 18px;
+  max-width:60ch;
   line-height: 1.4;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  max-width:60ch;
 }
 
 
@@ -79,7 +84,7 @@ html {
 /* --- GLOBAL MOBILE and TABLET STYLES */
 
 
-@media screen and (min-width:438px) and (max-width:890px) {
+@media screen and (min-width:438px) and (max-width:700px) {
 
 
   /* Div margins */
@@ -87,14 +92,10 @@ html {
   /* for heading section titles bottom margin */
   div.section_title_container {
     margin-bottom: 8%;
+    width: 100%;    
   }
-
-
-
-  /* ---GLOBAL Paragraph text SIZE---*/
-  html p {
-    font-size: 60%;
-  }
+  
+  
 
   /* ---GLOBAL Heading text SIZE---*/
 
@@ -109,7 +110,7 @@ html {
       -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
       -webkit-text-stroke-width: 2px;
       -webkit-text-stroke-color: #fff;      
-      margin-top: 3%;      
+      margin-top: 3%;            
       border-bottom: 1px solid #fff;
   }
 
@@ -143,14 +144,14 @@ html {
 
   /* GLOBAL MOBILE TABLET Paragraph TEXT SIZE  --- */
 
-  #home_section p,
+  /* #home_section p,
   #about_section p,
   #skills_section p,
   #portfolio_section p,
   #contact_section p {
     font-size: 0.7em;
     
-  }
+  } */
 
 
   
@@ -160,11 +161,27 @@ html {
 
 /* MORE GLOBAL MOBILE STYLES */
 
-@media screen and (min-width:630px) {
+@media screen and (max-width:650px) {
+  
 
-  /* #home_section .my_card_style {
-    margin-top: 15%;
-  } */
+  /* for heading section titles bottom margin */
+  div.section_title_container {
+    margin-bottom: 8%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #home_section .section_title_container h1,
+  #about_section .section_title_container h1,
+  #skills_section .section_title_container h1,
+  #portfolio_section .section_title_container h1,
+  #contact_section .section_title_container h1 {
+    
+    font-size: 5em;
+    margin-left: auto;
+    margin-right: auto;  
+  }
 
 } /* END media Query*/
 
@@ -339,7 +356,7 @@ html {
      }
      
      .mobile_logo img {
-          width: 20%;
+          width: 30%;
           height: auto;          
      }
 
@@ -388,8 +405,8 @@ html {
 
         #mobileLinks {
           position: relative;
-          z-index: 20;          
-          border-bottom: 1px solid #fff;
+          z-index: 20;                    
+          border-bottom: 2px solid #fff;
         }
         
         .topnav a {
@@ -408,7 +425,8 @@ html {
           font-weight:bold;
         }
         
-        
+        /* OPEN button position and styles */
+
         .topnav a.icon  {  
             width: 18%;
             height: auto;        
@@ -422,6 +440,25 @@ html {
             border: 2px solid #fff;
             border-radius: 0.25em;          
         }
+
+        /* CLOSE button position and styles */
+
+        #mobileLinks a.close_icon  {  
+          font-size: 45px;
+          width: 20%;
+          height: auto;        
+          background: #000;
+          display: block;
+          position: absolute;
+          top: -101px;          
+          right: 15px;          
+          padding: 1% 2%;
+          margin: 0;            
+          /* border: 2px solid #fff;
+          border-radius: 0.25em;           */
+      }
+
+      /* HOVER color for menu items */
                 
         #mobileLinks a:hover {          
           background: #ccc294;
@@ -438,164 +475,109 @@ html {
 */
 
 
+      /* --------------------------------------------- */
 
+                  /*   HOME STYLES  */
 
-/*   home section styles  */
-
+      /* ------------------------------------------- */
 
 
 /* w3-css custom styles */
 
 
 #home_section {
+    width: 100%;
+    height: auto;
     background:  #000;
     color: #fff;
     border-bottom: 1px solid #fff; 
 }
 
 
-.my_card_style {
+.home_left h3 {
+  margin: 15% auto 6% 12%;
+}
+
+.drop_cap_homesection {
+  font-family: 'Yellowtail', cursive;
+    font-size: 1.8em;
+}
+
+
+.home_right {  
+  height: 350px;
+}
+
+
+/* Move both left and right columns upward in their div container */
+
+.home_left {
+  margin-top: -5%;
+}
+
+.home_right {
+  margin-top: -10%;
+}
+
+
+/* RECENT Work Card Styles: Home Section */
+
+
+.recent_work_card {
   max-width: 300px;
   min-width: 300px;
+  height: 200px;
   margin-left: auto;
   margin-right: auto;
 }
 
 
-.my_card_style_color {
+.recent_work_card_color {
   background-color: #204161;
 }
 
+.recent_work_card h4 {
+  font-family: 'Yellowtail', cursive;
+    font-size: 2em;
+}
 
-
-/* OR */
-
-
-.home {
-     background:  #000;
-     color: #fff;
-   }
-   
-   .home_container {
-     padding-top: 2%;
-     padding-bottom: 2%;
-     padding-left: 3%;
-   }
-   
-   .home_container h1 {
-     font-size: 110px;
-     color: black;
-     -webkit-text-fill-color: transparent;   /* Will override color (regardless of order) */
-     -webkit-text-stroke-width: 3px;
-     -webkit-text-stroke-color: #fff;
-     margin-bottom: 32px;
-   }
-   
-   .home_grid {
-     display: grid;
-     grid-template-columns: 1fr 3fr;
-     height: 800px;
-   }
-
-   .aside_content {
-     padding: 5%;
-     margin-left: 8%;
-   }
-
-   .aside_content h2 {
-        margin-bottom: 10%;
-   }
-
-
-   .home_right {
-     margin-top: -50px;
-     padding: 5px 100px 0 20px;
-   }   
-   
-   .recent_projects {
-     display: flex;
-     flex-flow: row wrap;
-     /* flex-direction: row; */
-     justify-content:center;
-     padding: 2px 2px;
-   }
-   
-   .recent_projects div img {
-     
-     padding: 0px;
-     width: 100%;
-     height: 100%;
-   }   
-  
-
-  /* Home  big desktop styles  */
-
-   @media screen and (max-width: 1368px) {
-     
-     .recent_projects {
-       display: flex;
-       flex-flow: row wrap;
-       width: 120%;
-       height: 100%;
-       margin-top: 3%;
-     }
-
-     .recent_projects div {
-       max-width: 90%;
-       max-height: auto;
-       margin: -2%;
-     }
-
-     .recent_projects div img {
-
-          padding: 0px;
-          max-width: 100%;
-          max-height: 100%;
-     }
-   }
-.contact-list a {
-  text-decoration: none;
+.recent_work_card p {
+    font-size: 17px;
 }
 
 
-/* home tablet styles  */
 
-   @media screen and (max-width: 1000px) {
-         
-          .home {
-               padding: 30px;
-          }
-     
-          .home_container h1 {
-          font-size: 70px;
-          }
-     
-          .home_grid {
-          grid-template-columns: 1fr  2fr;
-          }
-     
-          .home_container {
-          padding-left: 0px;
-          }
-     
-          .home_right {
-          margin-bottom: 60px;
-          }
-   }
+    /* HOME TABLET QUERY */
 
-   /* home_section smartphone styles  */
+    @media screen and (min-width:700px) and (max-width:1024px) {
+
+      .home_right {
+        margin-top: -5%;
+      }      
+
+    } /* END Media Query: HOME Tablet styles*/
+
+ 
+  
+
+   /* ----- home_section smartphone styles -------  */
+
    
-   @media screen and (max-width: 468px) {
-          .home {
-          padding: 10px;
-          }
-     
-          .home_container h1 {
-               font-size: 40px;
-          }
-   }
+   @media screen and (max-width: 650px) {
+          
+        .home_left h3 {
+            margin: 5% auto 6% 12%;
+        }
 
-   /* END home section smartphone styles  */
+        /* Move both left and right columns upward in their div container */
+
+        .home_right, .home_left {
+          margin-top: 5%;
+        }
+
+
+
+   } /* END media query home section smartphone styles  */
    
 
 
@@ -609,183 +591,125 @@ html {
 
 
 
+                  /* ------------------------------------- */
+                  
+                        /*   ABOUT STYLES  */
 
-/*   about section styles  */
+                /* ----------------------------------------------- */
 
 
 /* w3-css custom styles */
 
 #about_section {  
-  background:  #204161;
+  background:  #000;
   color: #fff;
   border-bottom: 1px solid #fff; 
 }
 
-
-
-.w3-third {
-  margin-top: -18%;     
-   padding: 5%;
+.drop_cap_aboutsection {
+  font-family: 'Yellowtail', cursive;
+    font-size: 4em;
 }
 
+
+.about_left_column {
+  margin:0 0 0 auto;  
+}
+
+.about_left_column p {
+    font-size: 1.2em;
+}
+
+
+.about_right_column > div {
+  margin-top: -25%;  
+}
+
+
+
 .about_img img {
-  max-width: 250px;
-  height: auto;     
-  padding: 5%;
+  max-width: 250px;  
+  width: 48%;
+  height: auto;
+  margin-top: 5%;
+  margin-bottom: 8%;     
+  padding: 2%;
+  border-bottom: 1px solid #fff;
   border-radius: 1.5em;
 }
 
-.w3-third a {
- width: 90%;
- margin-left: 2%;  
- margin-top: 4%;    
+
+
+.about_btns a {
+ background: #000;
+ font-size: 1.5em;
+ width: 60%;
+ height: 50px;
+ margin-left: auto;
+ margin-right: auto;
+ margin-bottom: 8%;
+ border: 3px solid #fff;
+ border-radius: 1em; 
+}
+
+.about_mobile {
+  display: none;
 }
 
 
 
-   /* OR */
+  /* END ABOUT DESKTOP STANDARD STYLES  */
 
 
-   .about_section {
-    /* padding: 20px 30px; */
-    background:  #204161;
-    color: #fff;
-    border-bottom: 1px solid #fff;     
+   
+   
+                  /* ABOUT MEDIA QUERIES */
+
+
+    /* ABOUT TABLET QUERY */
+
+@media screen and (min-width:700px) and (max-width:1024px) {
+
+  .about_btns a {
+      width: 75%;
+      height: 60px;
+      font-size: 1.8em;
+      border-radius: 0.8em;      
   }
 
-      
-   .about_container {
-     display: flex;
-     flex-direction: column;
-     justify-content: flex-start;     
-   }
-   
-   .about_container h1 {
-     font-size: 100px;
-     color: black;
-     -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-     -webkit-text-stroke-width: 3px;
-     -webkit-text-stroke-color: #fff;
-     margin-bottom: 2%;
-   }
-
-
-   
-   .about_content {
-     display: grid;     
-     grid-template-columns: 2fr 3fr;
-     grid-template-rows: 2fr;
-   }
-
-   
-   .about_text h2 {
-     
-     line-height: 1.2;
-     margin-bottom: 4%;
-     font-size: 20px;
-   }
-   
-   
-   .about_text p {
-     margin-bottom: 5%;
-     line-height: 1.4;
-   }
-
-.about_right {
-     position: absolute;
-     top: -10%;
-   }
-   
-    .about_right img {
-     width: 70%;
-     height: auto;                    
-     margin-left: 30%;
-     margin-bottom: 20%;
-     border-radius: 1rem;
-     border-bottom: 2px solid #fff;
-   }
-   
-   .about_right div {     
-      padding: 2% 20% 2% 5%;
-   }
-
-
-  /* END DESKTOP STANDARD STYLES  */
-
-
-   
-   
-   /* about section tablet styles : media queries */
-
-
-    /* max-width says change anything below this width */
-
-   @media screen and (max-width: 1085px) {
-
-     .about_section {
-       padding: 30px;       
-     }
-     .about_content {
-       display: grid;
-       grid-template-columns: 3fr 3fr;
-       grid-template-rows: 2fr;
-     }              
-   
-     .about_container h2 {
-       font-size: 25px;
-     }
-
-     .about_right img {
-      width: 70%;
-      height: auto;                    
-      margin-left: 30%;
-      margin-bottom: 20%;
-      border-radius: 1rem;
-      border-bottom: 2px solid #fff;
-    }
-
-    .about_right div {     
-      padding: 2% 20% 2% 5%;
-   }
-
-
-   } /* END media query max-width 1085px*/ 
-
-
+} /* END tablet media query */
 
 /* ----------------------------------------------- */
-/* TABLET between 665px and 820px */
+           /* TABLET between 665px and 820px */
 
 /* ----------------------------------------------- */
 
 @media screen and (min-width:665px) and (max-width:820px) {
-
-  .about_container h1 {
-    font-size: 7em;
-  }
- 
-  .about_content {
-    display: grid;    
-    grid-template-columns: 2fr 2fr;
-    grid-template-rows: 2fr;
-  }
-
-  .about_right {
-    position: absolute;    
-    max-width:100%;
-    height: auto;    
-  }
-
-
-  .about_right img {
-    max-width: 80%;
-    height: auto;                    
-    margin-left: 20%;
-    margin-bottom: 20%;
-    border-radius: 1rem;
-    border-bottom: 2px solid #fff;
-  }
+    
+    .about_right_column {
+      margin-top: -10%;  
+    }
   
+    
+    .about_img img {    
+      width: 60%;
+      height: auto;
+      margin-top: 5%;
+      margin-bottom: 8%;     
+      padding: 2%;
+      border-bottom: 1px solid #fff;
+      border-radius: 1.5em;
+    }
+  
+  
+  
+  .about_btns a {
+   width: 90%;
+   height: 60px;
+   margin-left: auto;
+   margin-right: auto;
+   margin-bottom: 5%; 
+  }
   
 
 } /*  END min-width 665px and max-width 820px*/  
@@ -793,65 +717,48 @@ html {
 /* -------------------------------------------------- */
 
 
-
-/* ----------------------------------------------- */
-/* TABLET between 800px and 1085px */
-
-/* ----------------------------------------------- */
-
-@media screen and (min-width:850px){
- 
-  
-  .about_container h1 {
-    margin-left: 10%;
-  }
-  
-  .about_content {
-    display: grid;    
-    grid-template-columns: 4fr 4fr;
-    grid-template-rows: 2fr;
-  }
-
-  .about_text {
-    margin-left: 20%;
-    margin-bottom: 10%;
-  }
-
-  .about_right {
-    position: absolute;    
-    max-width:100%;
-    height: auto;    
-  }
-
-
-  .about_right img {
-    max-width: 80%;
-    display: block;
-    height: auto;
-    margin: 0 auto 20% auto;                            
-    border-radius: 1rem;
-    border-bottom: 2px solid #fff;
-  }
-
-
-  .about_right {
-    margin-right: 10%;
-  }
-
-
-} /* END media query 820px-1085px */
-
-/*------------------------------------------*/
-
-
    
+/* --------------------------------------------------------------- */
+   /*  ABOUT MEDIA QUERIES SMARTPHONES */
 
-   /*  about section smartphones: media queries */
+/* ------------------------------------------------------------------ */
 
 
    @media screen and (max-width: 605px) {
 
-     .about_text h2 {
+     
+    .about_mobile {
+      display: block;
+      width: 60%;
+      height: auto;
+      margin: 5% auto 18% auto;      
+      border-bottom: 1px solid #fff;
+      border-radius: 1.5em;
+    }
+    
+    .about_right_column > div {
+      margin-top: 5%;  
+    }
+    
+    
+    /* HIDE desktop profile img */
+    .about_img img {      
+      display: none;
+    }
+    
+    
+    
+    .about_btns a {
+     width: 100%;
+     font-size: 1.5em;
+     height: 60px;
+     margin: 0 auto 15% auto;     
+    }
+    
+    
+    /* OR */
+    
+    .about_text h2 {
        font-size: 20px;
      }
    
@@ -867,7 +774,7 @@ html {
        padding: 5%;
     }
      
-   } 
+   } /*--END media query about section smart phones-----*/ 
 
 
 
@@ -878,12 +785,15 @@ html {
 
 
 
-
-   /* skills section styles  */
+              /* --------------------------------------- */
+                
+                 /*---- SKILLS SECTION styles ----*/
+              
+              /* ----------------------------------- */
 
 
    section.skills {
-    background:#000; 
+    background: #204161; 
     border-bottom: 1px solid #fff;
    }   
   
@@ -892,217 +802,110 @@ html {
     font-weight:bold;
     margin-left: 10%;
   }
+
+  section.skills > .skills_container {
+      margin-bottom: 10%;
+  }
+
+  .skills_column h2 {
+      font-size: 1.7em;
+  }
+
+  .skills_column p {
+    font-size: 1.3em;    
+    margin-bottom: 8%;
+  }
+
+  .skills_column ul {
+      list-style-position:unset;
+      font-size: 1.3em;      
+      margin: 4% auto 4% 18%;
+  }
   
+.skills_column ul li {
+  line-height: 1.5;
+  margin-left: 10%;  
+}
 
-  .skills > .w3-display-container ul {
-    list-style-position: inside;
-    padding-left: 15%;
-  }
+.skills_column h4 {
+  font-size: 1.4em;
+  margin: 4% auto 0 auto;  
+}
+ 
 
-  .skills > .w3-display-container > .w3-row > .w3-quarter  {     
-      background: #204161;
+  .skills_right .call_box {
+      width: 140%;
+      height: auto;     
+      background: #000;
       border-radius: 1em;
-      margin: 5% auto 5% auto;
-      border-bottom: 1px solid #fff;
-      
+      margin: 8% auto 5% auto;
+      border-bottom: 4px solid #fff;      
   }
 
-  .skills > .w3-display-container > .w3-row > .w3-quarter a {
-    text-transform: uppercase;
+  .call_box a {
+    background: #204161;
+    border-radius: 2em;
+    width: 80%;
+    height: 45px;
+    padding: 3% 0 3% 0;
+    margin: 15% auto 3% auto;
+    font-size: 1.2em;
+    text-align: center;
+    text-transform: uppercase;    
   }
 
 
 
+        /* ------------------------------- */
+           /* media query SKILLS SECTION SMARTPHONE styles */
+        /* -------------------------------------- */
 
-   
-   /* OR  */
+@media screen and (max-width: 650px) {
 
-   /* .skills {
-     background:#000;
-     color: #fff;
-     position: relative;
-   } */
-   
-   .skills_container {
-     background: #000;
-     padding-top: 100px;
-     padding-bottom: 100px;
-     padding-left: 60px;
-   }
-   
-   .skills_grid {
-     display: grid;
-     grid-template-columns: 2fr 2fr;
-     grid-template-rows: 700px;
-   }
-   
-   .skills_container h1 {
-     font-size: 50px;
-   }
-   
-   .skills_left {
-     display: flex;
-     flex-direction: column;
-     justify-content: space-evenly;
-     padding: 0 50px;
-   }
-   
-   .skills_content {
-     display: flex;
-     align-items: flex-start;
-   }
+    
+  .skills_container .skills_column h2 {
+    font-size: 2.5em;
+    margin: 0 auto 0 auto;
+  }
+  
+  .skills_right .call_box {
+      width: 100%;
+      height: auto;     
+      background: #000;
+      border-radius: 1em;
+      margin: 15% auto 5% auto;
+      border-bottom: 4px solid #fff;      
+  }
 
-   
-   .skills_content img {
-     margin-right: 50px;
-   }
-   
-   .skills_desc h2 {
-     font-size: 16px;
-     text-transform: uppercase;
-     margin-bottom: 16px;
-   }
-   
-   .skills_desc p {
-     line-height: 2;
-   }
-   
+  .skills_right .call_box a {
+      background: #204161;
+      width: 50%;
+      height: 50px;
+      padding: 4% 0 4% 0;
+      margin: 15% auto 3% auto;
+      font-size: 1em;      
+  }
 
-   /* .macbook {
-     height: 700px;
-     width: 100%;
-     }
-   */
+} /* END media Skills smartphone styles*/
 
-
-   .action_call {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     padding: 10px;
-   }
-
-   .action_call h2 {
-     font-size: 16px;
-     text-transform: uppercase;
-     margin-bottom: 16px; 
-   }
-
-.action_call p {
-     line-height: 2;
-}
-
-.action_call p label{
-     color: #fff;
-}
-
-
-.input_fields {
-     border: 1px solid #fff;
-}
-
-
-
-
-   
-   .email_bar {
-     background:  #ccc294;
-     height: 80px;
-     bottom: -40px;
-     right: 0;
-     width: 80%;
-     color: #000;
-     display: flex;
-     justify-content: flex-start;
-     align-items: center;
-   }
-   
-   .email_bar img {
-     margin: 0 40px;
-   }
-   
-   .email_bar p {
-     margin-right: 40px;
-     font-weight: 700;
-     text-transform: uppercase;
-   }
-   
-   /* Media Queries */
-   @media screen and (max-width: 768px) {
-     .skills_grid {
-       grid-template-columns: 1fr;
-     }
-   
-     /*  
-     .macbook {
-       display: none;
-     }
-     */
-   
-     .email__bar {
-       width: 100%;
-       justify-content: flex-start;
-     }
-   }
-
-   /* skills section smartphone styles  */
-   
-   @media screen and (max-width: 468px) {
-
-     .skills_container {
-       padding-top: 100px;
-       padding-bottom: 160px;
-       padding-left: 16px;
-     }
-   
-     .skills_grid {
-       grid-template-columns: 1fr;
-       grid-template-rows: 900px;
-     }
-   
-     .skills_container h1 {
-       text-align: center;
-       margin-bottom: 100px;
-     }
-   
-     .skills_left {
-       padding: 0 24px;
-     }
-   
-     .skills_content {
-       margin-top: 40px;
-     }
-   
-     .skills_content img {
-       margin-right: 16px;
-     }
-   
-     .email_bar img {
-       margin: 0 20px;
-     }
-   
-     .email_bar p {
-       margin-right: 20px;
-     }
-   }
-
-   
-
-
+  
 /* --------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
 */
 
 
 
-
-   /*  portfolio Section styles  */
+            /* ---------------------------------------- */
+            
+                     /*  PORTFOLIO STYLES */
+            
+             /* ------------------------------------------ */
 
    
 
    section.portfolio {
     background:#204161;
-    padding: 20px 30px;    
+    padding: 10px 20px;    
     border-bottom: 1px solid #fff;
    }
 
@@ -1115,170 +918,200 @@ html {
    .projects_nav li {
        list-style-type:none; 
    }
-
-   /* #portfolio_section .portfolio_card {
-      min-width: 80%;      
-   } */
-
-
-
-
-   /* OR */
-
-
-   .portfolio {
-    background:  #000;
-    color: #fff;
-  }
-
    
-   
-   .portfolio_container {
-     padding-top: 100px;
-     padding-bottom: 100px;
-     padding-left: 60px;
-   }
-   
-   .portfolio_container h1 {
-     font-size: 100px;
-     color: black;
-     -webkit-text-fill-color: transparent;   /* Will override color (regardless of order) */
-     -webkit-text-stroke-width: 3px;
-     -webkit-text-stroke-color: #fff;
-     margin-bottom: 32px;
-   }
-   
-   .portfolio_main {
-     display: grid;
-     grid-template-columns: 2fr 3fr;
-   }
-
-   .portfolio_sidenav {
-        background: #204161;
-   }
 
 
-   .portfolio_sidenav a {
-     color: #fff;
-     text-decoration: none;
-   }
+/* ------- FLIP CARD STYLES --------------- */
 
-   .portfolio_sidenav li {
-        list-style-type: none;
-        line-height: 2;
-   }
-   
-   
-   
-   .portfolio_right {
-     padding: 5px 100px 0 20px;
-   }   
-   
-   .portfolio_projects {
-     display: flex;
-     flex-direction: row;
-     justify-content: space-between;
-     padding: 2px 2px;
-   }
-   
-   .portfolio_projects img {
-     
-     padding: 0px;
-     width: 100%;
-     height: auto;
-     margin: 3%;
-   }
 
-   .img_links a {
-     text-decoration: none;
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+
+.flip-card {
+    background-color: transparent;
+    max-width: 80%;
+    height: 480px;
+    margin: 0 auto 15% auto;     
+    /* border: 1px solid #f1f1f1; */
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */    
+}
+
+/* Flip Card Reflection */
+
+.flip-card-reflection {
+  -webkit-box-reflect: below 7px -webkit-gradient(linear, right top, right bottom, from(transparent), color-stop(87%, transparent), to(rgba(255, 255, 255, 0.6)));
+}
+
+/* flip card front side styles and sizing */
+
+
+.flip-card-front img {
+    width: 100%;
+    height: auto;
+    border-radius: 1.4em 1.4em 0 0;
+}
+
+
+/* Flip card Inner (back side) styles */
+
+/* This container is needed to position the front and back side */
+
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;    
+    border-radius: 1.4em;    
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Do a horizontal flip when you move the mouse over the flip box container */
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-bottom: 6px solid #fff;
+    border-radius: 1.4em;    
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+
+.flip-card-front {
+  background-color: #000;
+  color:#fff;
+}
+
+.flip-card-front h4 {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 0 2% 0 2%;
+  margin: 10% 0 2% 0;
+}
+
+
+.flip-card-front p {
+  font-size: 18px;
+  font-weight: 300;
+  margin: 4% 0 2% 0;
 }
 
 
 
-/* skills mobile to tablet size range styles query w3-css layout */
+/* Style the back side */
 
-@media screen and (min-width:640px) and (max-width:680px) {
+.flip-card-back {
+    background-color: #000;
+    color: #fff;
+    padding: 5%;
+    transform: rotateY(180deg);
+}
 
-    .mobile_container {
-        display: block;
-        float:unset;
-        width: 100%;
-        height: auto;        
+
+/* Style back side text */
+
+
+.flip-card-back p {
+  font-size: 1.1em;
+  margin: 5% 0 2% 0;
+}
+
+.flip-card-back a {
+    width: 80%;
+    background: #204161;
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: bold;
+    border-radius: 0.9em;
+    margin-top: 8%;
+    margin-right: auto;
+    margin-left: auto;    
+}
+
+.card_spacing a {    
+    margin: 20% auto 0 auto; 
+}
+
+
+
+/* --------- END FLIP CARD STYLES --------------- */
+
+
+
+
+/* ------------------------------------------- */
+
+      /* PORTFOLIO MEDIA QUERIES */
+
+/* ------------------------------------------- */
+
+
+
+/* PORTFOLIO media query : TABLET STYLES */
+
+@media screen and (min-width:700px) and (max-width:1024px) {
+
+    
+  .flip-card .flip-card-inner .flip-card-front h4  {
+    font-size: 1.5em;
+    margin: 10% 0 5% 0;
+  }
+  
+  
+  .flip-card .flip-card-inner .flip-card-front p {
+      font-size: 1.5em;
+      margin-left: 2% 0 5% 0;
     }
 
-    #portfolio_section .portfolio_card {
-      margin-bottom: 10%;
+    .flip-card-inner .flip-card-back p {
+        font-size: 1em;
     }
+
+    .flip-card-inner .flip-card-back a {
+      font-size: 1.3em;
+  }
 
 } /* END MEDIA QUERY*/
 
-/* media query for small tablet large smartphone */
 
-@media screen and (max-width:670px) {
 
-  #portfolio_section .mobile_container {
-      display: block;
-      float:unset;
-      width: 100%;
-      height: auto;      
-  }
-
-  #portfolio_section .portfolio_card {
-    margin-bottom: 10%;
-  }
-
-} /* END MEDIA QUERY*/
 
 
 
    
-  /* portfolio big desktop styles  */
-
-   @media screen and (max-width: 1368px) {
-     
-     .portfolio_projects {
-       flex-direction: column;
-     }
-   }
+   /* PORTFOLIO media query SMARTPHONE STYLES  */
 
 
-
-/* portfolio tablet styles  */
-
-   @media screen and (max-width: 1000px) {
-         
-          .portfolio {
-               padding: 30px;
-          }
-     
-          .portfolio_container h1 {
-          font-size: 70px;
-          }
-     
-          .portfolio_main {
-          grid-template-columns: 1fr;
-          }
-     
-          .portfolio_container {
-          padding-left: 0px;
-          }
-     
-          .portfolio_right {
-          margin-bottom: 60px;
-          }
-   }
-
-   /* portfolio smartphone styles  */
    
-   @media screen and (max-width: 468px) {
-          .portfolio {
-          padding: 10px;
-          }
-     
-          .portfolio_container h1 {
-          font-size: 40px;
-          }
-   }
+   @media screen and (max-width: 650px) {
+          
+    
+    /* TURN OFF FLIP CARD REFLECTION */
+    .flip-card-reflection {
+      -webkit-box-reflect: unset;
+    }
+
+    .flip-card {
+      max-width: 105%;
+    }
+
+    
+    
+    .flip-card .flip-card-inner .flip-card-back a {
+      font-size: 1.2em;
+  }
+
+
+   } /* END media query portfolio section for smartphones*/
    
 
 
@@ -1289,96 +1122,219 @@ html {
 */
 
 
+    /* ----------------------------------- */
 
-   /* contact section styles  */
+      /* CONTACT SECTION STYLES */
 
-
-   
-   /* w3-css custome styles */
-
+      /* --------------------------- */
 
 
+/* HIDE Mobile ONLY Contact Section Social media */
+div.contact_show_mobile {
+  display: none;
+}
+  
+      
    section.contact {
     background:#000;    
     border-bottom: 1px solid #fff;
-   }   
-
-   
-   
-   
-   /* -- OR --- */
-   
-   
-   .contact_section {
-     display: flex;
-     align-items: center;
-     background: #204161;
-     padding: 100px 0;
    }
 
-   .contact_container {
-     display: flex;
-     flex-direction: column;
-     justify-content: flex-start;
+.contact_left {
+    margin: 12% auto 0 auto;
+}
+
+
+.contact_right {
+  margin: -10% auto 0 auto;
+}
+
+   .contact p {
+     margin: 18% 0 5% 0;
    }
 
 
-   .contact_container h1 {
-     font-size: 100px;
-     color: black;
-     -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-     -webkit-text-stroke-width: 2px;
-     -webkit-text-stroke-color: #fff;
-     padding: -4%;
-     margin-bottom: 2%;
-   }
-   
-   .contact_content {
-     display: grid;
-     grid-template-columns: 1fr 1fr;
-     grid-template-rows: 700px;
+   .contact label {
+     font-size: 1em;
    }
 
 
-   .contact_text h2 {
-     font-size: 48px;
-     color: #fff;
-     line-height: 1.5;
-     margin-bottom: 32px;
-   }
+/* SMARTPHONE IMAGE CREATED BY CSS and DIVS */
+
+.card_phone {
+  background: #000;   
+  max-width: 200px;
+  height: 330px;
+  margin: -18% auto 10% auto;
+  border-top: 4px solid #fff;
+  border-right: 3px solid #fff;
+  border-left: 3px solid #fff;
+  border-bottom: 10px solid #fff;        
+border-radius: 1.4em; 
+}
+
+/* creates reflection effect below phone graphic */
+
+.phone_reflection {
+  -webkit-box-reflect: below 7px -webkit-gradient(linear, right top, right bottom, from(transparent), color-stop(60%, transparent), to(rgba(255, 255, 255, 0.6)));
+}
+
+/* Phone screen styles and sizing */
+
+.card_phone_screen {
+ background: #000;
+  width: 90%;
+ height: 260px;
+ padding: 4%;
+ margin: 10% auto 10% auto;
+ border: 2px solid #fff;        
+}
+
+.contact_left .card_phone_screen > h3 {
+  font-family: 'Yellowtail', cursive;
+  font-size: 2em; 
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.3;
+  margin: 22% auto 10% 9%;  
+}
+
    
-   .contact_text p {
-     margin-bottom: 50px;
-     line-height: 2.3;
-     color: #fff;
-   }
+/* END SMARTPHONE IMAGE CREATED BY CSS and DIVS */
+
+
+
+/* CONTACT SECTION SOCIAL MEDIA ICONS */
+
+
+.contact_social_icons{
+  width: 100%;
+  height: 300px;
+  margin: 18% auto 0 auto;
+}
+
+.contact_social_icons .fa {
+  background: #204161;
+  border: 1.5px solid #fff;
+  width: 50px;
+  height: 50px;
+  padding: 8% 2% 2% 2%;
+  margin-right: 5%;
+  font-size: 2.3em;  
+  text-decoration: none;    
+}
+
+.contact_social_icons a.fa-linkedin {
+  padding-bottom: 10%;
+}
+
+
+
+
+
+/* CONTACT  MEDIA QUERIES : TABLET STYLES */
+
+@media screen and (min-width:700px) and (max-width:1024px) {
+
+    
+    /* HIDE Mobile ONLY Contact Section Social media */
+    div.contact_show_mobile {
+      display: none;
+    }
+  
+  .card_phone {
+        max-width: 200px;
+        height: 370px;
+        margin: -18% auto 10% auto;        
+        border-top: 4px solid #fff;
+        border-right: 3px solid #fff;
+        border-left: 3px solid #fff;
+        border-bottom: 10px solid #fff;        
+      border-radius: 1.4em; 
+    }
+
+    .card_phone_screen {
+       width: 90%;
+       height: 310px;
+       padding: 4%;
+       margin: 10% auto 10% auto;
+       border: 2px solid #fff;        
+    }
+    
+
+} /* END MEDIA TABLET QUERY */
 
   
+   /*----------------------------------------*/
+    /* CONTACT STYLES on smartphone */
+   
+   /*----------------------------------------*/
+   
+@media screen and (max-width: 650px) {
 
-   /* contact tablet and smartphone styles  */
-   
-   @media screen and (max-width: 768px) {
+    
+  /* HIDE Smartphone Divs: doesn't looks cliche in a "smartphone". */
+  .card_phone, .card_phone_screen {
+        display: none;
+    }
 
-     .contact_section {
-       flex-direction: column;
-     }
+    /* SHOW Social media and h3 greeting */
+    .contact_show_mobile {
+      display: block;
+    }
+
+
+    section.contact {
+      height: auto;
+    }
+
+    .contact_row {
+      height: auto;
+    }
+
+    .contact_left {
+      margin: 2% auto 4% auto;      
+  }
+  
+  .contact_right {
+    height: auto;
+    margin: 6% auto 15% auto;
+  }
+  
+  .form_container{
+    height: auto;
+  }
+
+      .contact h3 {
+        text-align: center;
+      }
+
+
+      .contact h3 {
+        margin-top: 5%;
+      }
+
+      .contact label {
+        font-size: 1.5em;
+      }
+
+      .contact_submit input {
+          margin: 10% auto 0 auto;
+      }
+
+      /* CONTACT section SOCIAL MEDIA BUTTONS */
+
+      .contact_left .social_media .fa-facebook {
+        padding-top: 4%;
+        padding-bottom: 1%;
+      }
+
+
+   } /* END media query: contact section smartphones*/
    
-     .contact_container {
-       width: 100%;
-       justify-content: center;
-     }
-   
-     .contact_text p {
-       margin-right: 16px;
-     }
    
    
-     .contact_container h1 {
-       margin-left: 0;
-       margin-top: 24px;
-       font-size: 32px;
-     }
-   }
+   
 
 
 
@@ -1387,91 +1343,118 @@ html {
 -------------------------------------------------------------------------------
 */
 
-
-/* footer styles   */
+        /* ----------------------------------------- */
+                /*-- FOOTER STYLES   --*/
+        /* ----------------------------------------- */
 
 
    
-   footer.footer {
-     background: #204161;
-     color: #fff;
+footer.footer {
+  background: #204161;
+  color: #fff;
+  width: 100%;
+  height: auto;
+}
+
+
+.footer_row_container {
+    width: 100%;
+    height: auto;
+    margin: 8% auto 0 auto;
+}
+
+.footer_row_container .email_me a {
+  text-decoration: none;
+}
+
+.footer .social_media {
+  width: 100%;
+  padding: 3% 5% 3% 5%;
+  margin: 2% auto 2% auto;
+}
+
+
+.footer .social_media .fa {
+  padding-top: 2%;
+}
+
+.footer_navbar {
+  width: 100%;
+  height: auto;
+  margin: 10% auto 0 auto;
+  border-bottom: 1px solid #fff;
+}
+
+
+.footer_navbar a {      
+     font-size: 1em;     
+     text-decoration: none;
+     margin-right: -2%;     
+   }
+
+
+   .copyright_bar {
      width: 100%;
-     height: 150%;
+     height: auto;
+     margin: 2%;
+   }
+
+
+   .copyright_bar p {
+      text-align: center;
+      margin: 0 auto 0 auto;
    }
 
 
 
-
-   footer.footer a {
-     text-decoration: none;
-     width: 100%;          
-   }
-
-   .footer_navbar {
-        width: 100%;
-        height: auto;
-        margin-top: 10%;
-        margin-left: 10%;
-        margin-right: auto;
-   }
-
-
-
-   /* OR */
    
-   .footer_container {
-     padding: 20px 30px;
-     display: grid;
-     grid-template-columns:40% 1fr;
-   }
-   
-   
-   .footer_left h2 {
-     margin-bottom: 24px;
-   }
-   
-   .footer_left p {
-     line-height: 2;
-   }
-   
-   .footer_right {
-     display: flex;
-     justify-content: space-evenly;
-     padding: 0 100px;
-     height: 200px;
-   }
-   
-   .footer_right a {
-     color: #fff;
-     text-decoration: none;
-     text-transform: uppercase;
-     font-weight: 700;
-   }
 
 
    
-/* footer tablet styles  */
+/* FOOTER MEDIA QUERIES: TABLET STYLES  */
 
-   @media screen and (max-width: 1000px) {
-          .footer_container {
-          padding: 60px 24px;
-          grid-template-columns: 1fr 1fr;
-          }
+@media screen and (max-width: 700px) and (max-width: 1024px) {
+
+    .footer_navbar a {      
+      font-size: 1em;     
+      text-decoration: none;
+      margin-right: -6%;     
+    }
+          
+} /* END FOOTER MEDIA QUERY: TABLET*/
+
+/* --------------------------------------------------- */
+
+               /* FOOTER MEDIA QUERIES: smartphone styles  */
+/* --------------------------------------------------- */
    
-          .footer_right {
-          flex-direction: column;
-          }
-   }
+   @media screen and (max-width: 650px) {
+
+    
+    .footer .social_media {
+      width: 100%;
+      height: 120px;
+      margin: 0;      
+    }
+    
+    .footer .fa {
+      background: #000;
+        width: 60px;
+        height: 60px;
+        padding: 5%;        
+        margin: 4%;
+        font-size: 2em;
+    }
 
 
-
-/* footer smartphone styles  */
-
-   
-   @media screen and (max-width: 700px) {
-
-    footer.footer a {
+    .footer .social_media .fa-facebook {
+      padding-top: 4%;
+    }
+    
+    
+    .footer .footer_navbar a {
         display: block;
+        font-size: 1.6em;
     }
 
     .footer_navbar {
@@ -1481,10 +1464,154 @@ html {
     .footer_copyright {
       text-align: center;
     }
-    
-    /* OR */
-     .footer_right {
-       padding: 0 16px;
-     }
-   }
+
+   } /* END media query footer for smartphones*/
+
+
+
+
+
+   /* -------------------------------------------- */
    
+   /* -------------------------------------------- */
+            /* FOOTER SOCIAL MEDIA ICON STYLES */
+  /* -------------------------------------------- */
+
+  .social_media {    
+    width: 100%;
+    height: max-content;
+    margin: 4% auto 8% auto;    
+  }
+   
+  .social_media h3 {
+      font-family: 'Yellowtail', cursive;
+      font-size: 3em;
+      margin-bottom: 4%;      
+  }
+  
+   .social_media .fa {
+    background: #204161;
+    border: 2px solid #fff;
+    width: 50px;
+    height: 50px;
+    padding: 2% 2% 2% 2%;
+    margin: 2% 4% 2% 2%;
+    font-size: 2em;
+    text-align: center;
+    text-decoration: none;    
+  }
+  
+     
+
+.social_media  .fa-facebook {   
+  color: white;
+  padding-top: 5%;
+  padding-right: 2%;  
+}
+
+.social_media .fa-linkedin {      
+      color: white;
+      padding-top: 3%;
+}
+
+
+
+     /* SOCIAL MEDIA QUERIES: TABLET STYLES */
+     
+
+@media screen and (min-width:700px) and (max-width:1024px) {
+
+    .social_media {    
+      width: 100%;
+      height: max-content;
+      margin: 8% auto 8% auto;    
+    }
+
+    .social_media h3 {
+      font-family: 'Yellowtail', cursive;
+      font-size: 3em;
+      line-height: 0.8;
+      margin-top: 4%;
+      margin-bottom: 8%;      
+  }
+      
+    
+    .fa {
+      background: #204161;
+      border: 1.5px solid #fff;
+      width: 40px;
+      height: 40px;
+      padding: 2% 2% 2% 2%;
+      margin: 2%;
+      font-size: 1.4em;
+      text-align: center;
+      text-decoration: none;    
+    }
+    
+      
+
+  .social_media .fa-facebook {     
+    color: white;
+    padding-top: 4%;
+    padding-right: 2%;  
+  }
+
+  .fa-linkedin {      
+        color: white;
+  }
+
+
+}/* END MEDIA QUERY SOCIAL MEDIA TABLET STYLES */
+  
+
+
+
+
+/* SOCIAL MEDIA ICONS for SMARTPHONES */
+
+
+@media screen and (max-width: 600px) {
+
+    /* Have to show social media icon and h3s since card_phone div hides them */
+
+    .contact_left .contact_show_mobile {
+      display: block;
+    }
+    
+  
+  .social_media {
+      width: 100%;      
+      height: auto;
+      margin:0;
+    }
+      
+    
+    .fa {      
+        width: 60px;
+        height: 60px;
+        padding: 4%;
+        margin: 5%;
+        font-size: 2em;
+        text-align: center;
+        text-decoration: none;    
+    }
+      
+
+  .fa-facebook {  
+    font-size: 1.2em; 
+    color: white;
+    padding-top: 2.3%;
+    padding-right: 2%;      
+  }
+
+  .fa-linkedin {      
+        color: white;
+  }
+
+} /* END SOCIAL MEDIA MEDIA QUERY: SMARTPHONE STYLES */
+
+
+
+
+
+

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Created by Kristian Del-Rio. April 24,2019 in Wake Tech Course Web-115 Spring 2019-->
+        <title> 
+            Resume Builder Project
+        </title>
+        <link rel="stylesheet" type="text/css" href="formStyles.css" />        
+    </head>
+        <body>
+            <script src="projectJS.js" > </script>            
+                                  
+            <hr />
+            
+            <p class="formSubHeading"><strong>Build Your Resume Form</strong></p>                        
+            
+            <form action="" id="form1" name="form1">
+    <!-- CONTACT DATA -->
+                <p>
+                    <label>Full Name:</label>
+                    <input type="text" id="fullName" /> 
+                </p>
+                <p>
+                    <label> Contact Address: </label>
+                    <input type="text" id="contactAddress" /> 
+                </p>
+                <p>
+                    <label>Phone:</label>
+                    <input type="text" id="phone" /> 
+                </p>
+                <p>
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" />                    
+                </p>
+                <br />
+                <label> personal employment data: </label> <br />
+                <textarea rows="15" cols="60" wrap="hard" id="personalData" name="personalData"></textarea>
+                <br /> <br />
+                
+                <label>Career Objective: </label><br />
+                <textarea rows="15" cols="60" wrap="hard" id="objectives" name="objectives"></textarea>
+                <br /><br />
+                <label>Educational Background: </label> <br />
+                <textarea rows="15" cols="60" wrap="hard" id="education" name="education"></textarea>
+                <br /><br /><br />
+                
+    <!-- JOB EXPERIENCE DATA -->
+                <h3>
+                    <strong>Employment Experience: </strong>
+                </h3>
+                
+                <p>
+                    <p> Dates of recent Employment: </p>                    
+                    <label> Start Date: </label>
+                    <input type="date" id="jobDate1"/>
+                    <br /><br />
+                    <label> End Date: </label>
+                    <input type="date" id="jobDate2" />
+                </p>
+                <label for="experience1"> Job experience details: </label>
+                <br />
+                <textarea rows="15" cols="60" wrap="hard" id="experience1" name="experience1"></textarea>
+                <br /><br /><br />
+                
+                <p>
+                    <p> Dates of Employment: </p>                    
+                    <label> Start Date: </label>
+                    <input type="date" id="jobDate3"/>
+                    <br /><br />
+                    <label> End Date: </label>
+                    <input type="date" id="jobDate4" />
+                </p>
+                <label for="experience2"> Job experience details: </label>
+                <br />
+                <textarea rows="15" cols="60" wrap="hard" id="experience2" name="experience2"></textarea>
+                <br /><br /><br />
+                
+                <p>
+                    <p> Dates of Employment: </p>                    
+                    <label> Start Date: </label>
+                    <input type="date" id="jobDate5"/>
+                    <br /><br />
+                    <label> End Date: </label>
+                    <input type="date" id="jobDate6" />
+                </p>
+                <label for="experience3"> Job experience details: </label>
+                <br />
+                <textarea rows="15" cols="60" wrap="hard" id="experience3" name="experience3"></textarea>
+                <br /><br /><br />
+                
+                
+                <p>
+                    <p> Dates of Employment: </p>                    
+                    <label> Start Date: </label>
+                    <input type="date" id="jobDate7"/>
+                    <br /><br />
+                    <label> End Date: </label>
+                    <input type="date" id="jobDate8" />
+                </p>
+                <label for="experience4"> Job experience details: </label>
+                <br />
+                <textarea rows="15" cols="60" wrap="hard" id="experience4" name="experience4"></textarea>
+                <br /><br /><br />
+               
+                <br /> <br />
+                
+                <label for="jobReferences"> Job References: </label>
+                <br />
+                <textarea rows="15" cols="60" wrap="hard" id="jobReferences" name="references"></textarea>
+                <br /> <br /> <br />
+
+                <input type="button" id="createResume" value="Create Resume" onclick="make_Resume()" />
+                                                
+            </form>
+            
+        </body>
+</html>
